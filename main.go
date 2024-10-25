@@ -9,13 +9,13 @@ func main() {
 	researchTask := "Research the Company and Role"
 
 	//array and slices
-	var taskItems = [20]string{codingTask, behavioralTask, researchTask}
+	var taskItems = []string{codingTask, behavioralTask, researchTask}
 
 	fmt.Println("##### Welcome to our Todo List App! #####")
 
 	fmt.Println("List of my Todos")
-	for _, task := range taskItems { //blank to explicit unused variable as in range loop need to provide index,task
-		fmt.Println(task)
+	for index, task := range taskItems { //blank to explicit unused variable as in range loop need to provide index,task
+		fmt.Printf("%d. %s\n", index+1, task)
 	}
 
 }
